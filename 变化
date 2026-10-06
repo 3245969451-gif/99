@@ -4,43 +4,38 @@ class MyClass
 {
 public:
     int fun(int arr[], int cd) 
-    {
-        int min = 0;  
-        for(int i = 0; i < cd; i++)
-        {
-            if (arr[i] < arr[min])
-            {
-                min = i;  
-            }
+{
+int min = 0;  
+for(int i = 0; i < cd; i++)
+{
+ if (arr[i] < arr[min])
+  {
+   min = i;  
+}
         }
-        int temp = arr[min];
-        arr[min] = arr[cd - 1];
-        arr[cd - 1] = temp;
-
-        return min;
+   int temp = arr[min];
+   arr[min] = arr[cd - 1];
+   arr[cd - 1] = temp;
+   return min;
     }
 };
-
 int main()
 {
-    int a;
-    cout << "请输入长度:";
-    cin >> a;
-
-    int arr[5];  
-    cout << "请输入" << a << "个数字";
-    for(int i = 0; i < a; i++)
+int a;
+cout << "请输入长度:";
+cin >> a;
+int arr[5];  
+cout << "请输入" << a << "个数字";
+for(int i = 0; i < a; i++)
     {
-        cin >> arr[i];
+      cin >> arr[i];
     }
-
-    cout << "交换前:";
-    for(int i = 0; i < a; i++)
+cout << "交换前:";
+for(int i = 0; i < a; i++)
     {
-        cout << arr[i] << " ";
+     cout << arr[i] << " ";
     }
     cout << endl;
-
     MyClass abc;
     abc.fun(arr, a);
 
@@ -50,6 +45,5 @@ int main()
         cout << arr[i] << " ";
     }
     cout << endl;
-
     return 0;
 }
